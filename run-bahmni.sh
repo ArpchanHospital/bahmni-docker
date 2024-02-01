@@ -22,7 +22,8 @@ function checkDockerAndDockerComposeVersion {
     fi
 
     # Check the version of Docker Compose
-    if ! [ -x "$(command -v docker compose version)" ]; then
+#    if ! [ -x "$(command -v docker compose version)" ]; then
+    if ! docker compose version &> /dev/null; then
     echo 'Error: docker compose is not installed. Please install docker compose.' >&2
     exit 1
     fi
