@@ -85,6 +85,7 @@ services:
       HOST: odoodb
       USER: ${ODOO_DB_USER}
       PASSWORD: ${ODOO_DB_PASSWORD}
+      ODOO_DEBUG_MODE: ${ODOO_DEBUG_MODE}
     logging: *log-config
 
   odoodb:
